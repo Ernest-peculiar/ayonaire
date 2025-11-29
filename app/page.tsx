@@ -631,13 +631,14 @@ function FeatureItem({ text }: { text: string }) {
       </span>
       <span
         style={{
-          fontFamily: "Satoshi, sans-serif",
+          fontFamily: "Satoshi",
           fontWeight: 400,
           fontStyle: "normal",
           fontSize: "16px",
           lineHeight: "100%",
           letterSpacing: "0",
           textTransform: "capitalize",
+          color: "#6E6E6E",
         }}
       >
         {text}
