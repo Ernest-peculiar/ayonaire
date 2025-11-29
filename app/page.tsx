@@ -517,11 +517,9 @@ export default function Page() {
           maxWidth: "1280px",
           width: "100%",
           opacity: 1,
-          gap: "40px",
+          gap: "0px",
           margin: "48px auto 0 auto",
           position: "static",
-          top: undefined,
-          left: undefined,
           height: "auto",
         }}
       >
@@ -561,7 +559,7 @@ export default function Page() {
             fontFamily: "Satoshi, sans-serif",
             fontWeight: 400,
             fontSize: "20px",
-            color: "#666",
+            color: "#6E6E6E",
             marginBottom: "36px",
             maxWidth: "700px",
           }}
@@ -569,38 +567,60 @@ export default function Page() {
           AI Is Reshaping Industries, And This Program Helps You Step Into
           Top-Growth, Top-Paying Roles.
         </div>
+        {/* Key Features Heading */}
         <div
-          className="w-full"
           style={{
-            background: "transparent",
-            borderRadius: "16px",
-            padding: "0",
-            flex: 1,
+            width: "100%",
+            maxWidth: "1280px",
+            margin: "0 auto 24px auto",
             display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
+            alignItems: "flex-start",
+          }}
+        >
+          <h3
+            style={{
+              fontFamily: "Spline Sans, sans-serif",
+              fontWeight: 700,
+              fontSize: "24px",
+              color: "#1a1a1a",
+              marginBottom: "24px",
+              marginLeft: "0",
+            }}
+          >
+            Key Features
+          </h3>
+        </div>
+        {/* Features Grid */}
+        <div
+          style={{
+            width: "100%",
+            maxWidth: "1280px",
+            margin: "0 auto",
           }}
         >
           <div
-            className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-6 w-full"
-            style={{ marginTop: "12px", gap: "40px" }}
+            className="grid grid-cols-1 md:grid-cols-3"
+            style={{
+              gap: "0px",
+              margin: "0",
+            }}
           >
             {/* Column 1 */}
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col" style={{ gap: "0px" }}>
               <FeatureItem text="No Tech Or Coding Background Required. We'll Teach You From The Ground Up" />
               <FeatureItem text="Globally Recognized Certification To Showcase Your AI Readiness" />
               <FeatureItem text="Access To Our AI Cloud Lab For Continuous Practice And Experimentation" />
               <FeatureItem text="Peer Community For Networking, Collaboration, And Accountability" />
             </div>
             {/* Column 2 */}
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col" style={{ gap: "0px" }}>
               <FeatureItem text="Hands-On Learning With Real AI Tools Like TensorFlow, OpenAI, Hugging Face, And LangChain" />
               <FeatureItem text="Career-Focused Curriculum With Resume, Portfolio, And LinkedIn Optimization" />
               <FeatureItem text="1-On-1 Mentorship, Weekly Support, And Expert Feedback" />
               <FeatureItem text="Mock Interviews, Job Mapping, And Career Coaching From Industry Professionals" />
             </div>
             {/* Column 3 */}
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col" style={{ gap: "0px" }}>
               <FeatureItem text="Projects That Mirror Real World Use Cases: Chatbots, Image Classifiers, NLP Apps, And More" />
               <FeatureItem text="Live Instructor-Led Training + Self-Paced Content For Full Flexibility" />
               <FeatureItem text="Tools And Frameworks Aligned To Top Roles: AI Engineer, ML Engineer, Prompt Engineer" />
@@ -616,17 +636,57 @@ export default function Page() {
 // Helper component for feature items
 function FeatureItem({ text }: { text: string }) {
   return (
-    <div className="flex items-start gap-3">
-      <span style={{ marginTop: "2px" }}>
-        <svg width="22" height="22" fill="none" viewBox="0 0 20 20">
-          <circle cx="10" cy="10" r="9" stroke="#F67219" strokeWidth="2" />
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        gap: "12px",
+        marginBottom: "18px",
+      }}
+    >
+      <span style={{ display: "flex", alignItems: "center" }}>
+        {/* Screenshot check SVG */}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="22"
+          height="22"
+          viewBox="0 0 40 40"
+          fill="none"
+        >
           <path
-            d="M6.5 10.5L9 13L13.5 8.5"
-            stroke="#F67219"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
+            d="M36.6663 20.0002C36.6663 10.7954 29.2043 3.3335 19.9997 3.3335C10.7949 3.3335 3.33301 10.7954 3.33301 20.0002C3.33301 29.2048 10.7949 36.6668 19.9997 36.6668C29.2043 36.6668 36.6663 29.2048 36.6663 20.0002Z"
+            stroke="url(#paint0_linear_287_4249)"
+            strokeWidth="1.5"
           />
+          <path
+            d="M13.333 21.2502C13.333 21.2502 15.9997 22.771 17.333 25.0002C17.333 25.0002 21.333 16.2502 26.6663 13.3335"
+            stroke="url(#paint1_linear_287_4249)"
+            strokeWidth="1.5"
+          />
+          <defs>
+            <linearGradient
+              id="paint0_linear_287_4249"
+              x1="3.33301"
+              y1="20.0002"
+              x2="36.6663"
+              y2="20.0002"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stopColor="#F25E25" />
+              <stop offset="1" stopColor="#F97F11" />
+            </linearGradient>
+            <linearGradient
+              id="paint1_linear_287_4249"
+              x1="13.333"
+              y1="19.1668"
+              x2="26.6663"
+              y2="19.1668"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stopColor="#F25E25" />
+              <stop offset="1" stopColor="#F97F11" />
+            </linearGradient>
+          </defs>
         </svg>
       </span>
       <span
@@ -637,7 +697,7 @@ function FeatureItem({ text }: { text: string }) {
           fontSize: "16px",
           lineHeight: "100%",
           letterSpacing: "0",
-          textTransform: "capitalize",
+          textTransform: "none",
           color: "#6E6E6E",
         }}
       >
