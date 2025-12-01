@@ -3,6 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-spline-sans: var(--font-spline-sans);
+  --font-satoshi: var(--font-satoshi);
 }
 
 @theme inline {
