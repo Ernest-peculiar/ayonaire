@@ -589,16 +589,18 @@ export default function Home() {
 
           <div 
             style={{
-              maxWidth: '1280px',
-              margin: '0 auto',
+              display: 'flex',
+              justifyContent: 'center',
+              width: '100%',
             }}
           >
             <div 
               style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(4, 310px)',
-                gap: '24px',
+                display: 'flex',
+                flexWrap: 'wrap',
                 justifyContent: 'center',
+                gap: '24px',
+                maxWidth: '1328px',
               }}
             >
             {[
@@ -637,6 +639,7 @@ export default function Home() {
                 key={index}
                 style={{
                   width: '310px',
+                  flexShrink: 0,
                   borderRadius: '16px',
                   padding: '10px',
                   background: 'linear-gradient(182.86deg, rgba(242, 94, 37, 0.24) 2.21%, rgba(249, 127, 17, 0) 56.93%)',
@@ -693,6 +696,204 @@ export default function Home() {
               </div>
             ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16">
+        <div className="max-w-[1280px] mx-auto px-6">
+          <div className="flex items-start mb-8">
+            <div 
+              className="flex items-center justify-center gap-3"
+              style={{
+                borderRadius: '100px',
+                background: '#FFFFFF',
+                border: '1px solid #D2D2D2',
+                boxShadow: '0px 10px 10px 0px #6767DA14',
+                padding: '12px 24px',
+              }}
+            >
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fillRule="evenodd" clipRule="evenodd" d="M9.18759 4.14886C8.15964 6.48064 6.29326 8.34699 3.96148 9.37502C6.29326 10.403 8.15964 12.2693 9.18766 14.6012C10.2156 12.2693 12.082 10.403 14.4137 9.37502C12.082 8.34699 10.2156 6.48064 9.18759 4.14886ZM8.64294 2.297H9.73231C10.5589 5.50142 13.0612 8.00372 16.2656 8.83037V9.91967C13.0612 10.7462 10.5589 13.2486 9.73231 16.453H8.64294C7.81636 13.2486 5.31405 10.7462 2.10962 9.91967V8.83037C5.31405 8.00372 7.81636 5.50142 8.64294 2.297Z" fill="#6E6E6E"/>
+                <path fillRule="evenodd" clipRule="evenodd" d="M12.377 4.87377V3.74877C12.6231 3.74877 12.9563 3.59736 13.2487 3.30161C13.542 3.00499 13.6882 2.67056 13.6882 2.4375H14.8132C14.8132 2.66905 14.9601 3.00332 15.2554 3.30101C15.55 3.59806 15.8833 3.74877 16.1245 3.74877V4.87377C15.8616 4.87377 15.5291 5.02637 15.2442 5.31592C14.9582 5.60677 14.8132 5.94137 14.8132 6.18503H13.6882C13.6882 5.94853 13.538 5.61508 13.2394 5.31834C12.9403 5.02113 12.6062 4.87377 12.377 4.87377ZM14.2426 4.75183C14.306 4.67263 14.3729 4.59749 14.4422 4.52705C14.5185 4.44946 14.6007 4.3745 14.6882 4.30377C14.6061 4.23656 14.5287 4.1659 14.4566 4.09322C14.3859 4.02196 14.3173 3.94565 14.252 3.86501C14.1872 3.94538 14.119 4.02149 14.0486 4.09262C13.9726 4.16952 13.8906 4.24411 13.8035 4.31472C13.8844 4.38039 13.961 4.44939 14.0324 4.52037C14.1049 4.59241 14.1755 4.66981 14.2426 4.75183Z" fill="#6E6E6E"/>
+              </svg>
+              <span 
+                style={{
+                  fontFamily: 'Spline Sans, sans-serif',
+                  fontWeight: 400,
+                  fontSize: '16px',
+                  lineHeight: '100%',
+                  textAlign: 'center',
+                  textTransform: 'capitalize',
+                  background: 'linear-gradient(90deg, #F25E25 0%, #F97F11 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                }}
+              >
+                Why Join
+              </span>
+            </div>
+          </div>
+
+          <h2 
+            className="mb-6"
+            style={{
+              fontFamily: 'Spline Sans, sans-serif',
+              fontWeight: 700,
+              fontSize: '48px',
+              lineHeight: '56px',
+              letterSpacing: '0%',
+              textAlign: 'left',
+              textTransform: 'capitalize',
+              color: '#141414',
+            }}
+          >
+            Job Assistance & Career Support
+          </h2>
+
+          <p 
+            className="mb-12"
+            style={{
+              width: '940px',
+              maxWidth: '100%',
+              fontFamily: 'Satoshi, sans-serif',
+              fontWeight: 400,
+              fontSize: '20px',
+              lineHeight: '30px',
+              letterSpacing: '0%',
+              textTransform: 'capitalize',
+              color: '#6E6E6E',
+              textAlign: 'left',
+            }}
+          >
+            All Bootcamp Learners Receive Access To Our Smart Job Assistance Portal — A Suite Of Tools And Expert Resources Designed To Help You Stand Out In Today&apos;s Job Market.
+          </p>
+
+          <h3 
+            className="mb-8"
+            style={{
+              fontFamily: 'Spline Sans, sans-serif',
+              fontWeight: 500,
+              fontSize: '32px',
+              lineHeight: '56px',
+              letterSpacing: '0%',
+              textTransform: 'capitalize',
+              color: '#141414',
+            }}
+          >
+            What&apos;s Included
+          </h3>
+
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(3, 407px)',
+              columnGap: '29.5px',
+              rowGap: '29px',
+              width: '1280px',
+              maxWidth: '100%',
+              margin: '0 auto',
+            }}
+          >
+            {[
+              {
+                icon: '/icons/ats.svg',
+                title: 'ATS Resume Builder',
+                description: 'Create A Resume That Passes Applicant Tracking Systems.',
+              },
+              {
+                icon: '/icons/linkedin.svg',
+                title: 'LinkedIn Optimizer',
+                description: 'Get AI Suggestions To Strengthen Your Profile.',
+              },
+              {
+                icon: '/icons/resume.svg',
+                title: 'Resume Building & Review',
+                description: 'Professional Feedback To Highlight Your Strengths.',
+              },
+              {
+                icon: '/icons/website.svg',
+                title: 'Portfolio Website',
+                description: 'Automatically Showcase Your Best Projects.',
+              },
+              {
+                icon: '/icons/interview.svg',
+                title: 'Interview Preparation',
+                description: 'Structured Guidance And Confidence Training.',
+              },
+              {
+                icon: '/icons/interviews.svg',
+                title: 'Mock Interviews',
+                description: 'Available For Select Bootcamps.',
+              },
+              {
+                icon: '/icons/internship.svg',
+                title: 'Virtual Internship',
+                description: 'Gain Practical Experience Before Job Hunting.',
+              },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="flex items-start gap-4 p-6"
+                style={{
+                  width: '407px',
+                  flexShrink: 0,
+                  borderRadius: '10px',
+                  background: '#FFFFFF',
+                  border: '1px solid #0000000F',
+                }}
+              >
+                <div 
+                  className="flex items-center justify-center flex-shrink-0"
+                  style={{
+                    width: '58px',
+                    height: '58px',
+                    borderRadius: '50px',
+                    background: 'linear-gradient(192.53deg, rgba(242, 94, 37, 0.24) 8.41%, rgba(249, 127, 17, 0) 94.27%)',
+                  }}
+                >
+                  <Image
+                    src={item.icon}
+                    alt={item.title}
+                    width={32}
+                    height={32}
+                  />
+                </div>
+
+                <div>
+                  <h4 
+                    style={{
+                      fontFamily: 'Satoshi, sans-serif',
+                      fontWeight: 500,
+                      fontSize: '20px',
+                      lineHeight: '100%',
+                      letterSpacing: '0%',
+                      textTransform: 'capitalize',
+                      color: '#141414',
+                      marginBottom: '8px',
+                    }}
+                  >
+                    {item.title}
+                  </h4>
+                  
+                  <p 
+                    style={{
+                      fontFamily: 'Satoshi, sans-serif',
+                      fontWeight: 400,
+                      fontSize: '16px',
+                      lineHeight: '24px',
+                      letterSpacing: '0%',
+                      textTransform: 'capitalize',
+                      color: '#6E6E6E',
+                      margin: 0,
+                    }}
+                  >
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
