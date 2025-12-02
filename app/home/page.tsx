@@ -9,6 +9,7 @@ export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
   const [popupAnimated, setPopupAnimated] = useState(false);
+  const [popupClosed, setPopupClosed] = useState(false);
   const statsRef = useRef<HTMLElement>(null);
   const bootcampRef = useRef<HTMLElement>(null);
 
@@ -22,9 +23,9 @@ export default function Home() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (bootcampRef.current) {
+      if (bootcampRef.current && !showPopup && !popupClosed) {
         const rect = bootcampRef.current.getBoundingClientRect();
-        if (rect.bottom < 0 && !showPopup) {
+        if (rect.top + rect.height < window.innerHeight / 2) {
           setShowPopup(true);
           setTimeout(() => setPopupAnimated(true), 10);
         }
@@ -33,11 +34,14 @@ export default function Home() {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [showPopup]);
+  }, [showPopup, popupClosed]);
 
   const handleClosePopup = () => {
     setPopupAnimated(false);
-    setTimeout(() => setShowPopup(false), 400);
+    setTimeout(() => {
+      setShowPopup(false);
+      setPopupClosed(true);
+    }, 400);
   };
 
   useEffect(() => {
@@ -509,80 +513,222 @@ export default function Home() {
         </div>
       </section>
 
-      {showPopup && (
-        <div 
-          className="fixed bottom-0 left-0 right-0 z-50"
-          style={{
-            maxWidth: '1440px',
-            margin: '0 auto',
-            background: '#FFFFFF',
-            borderTop: '2px solid transparent',
-            borderImage: 'linear-gradient(90deg, #F25E25 0%, #F97F11 100%) 1',
-            transform: popupAnimated ? 'translateY(0)' : 'translateY(100%)',
-            opacity: popupAnimated ? 1 : 0,
-            transition: 'transform 0.4s ease-out, opacity 0.4s ease-out',
-          }}
-        >
-          <div className="flex items-center justify-between px-12 py-6">
-            <div className="flex items-center gap-4">
-              <svg width="123" height="1" viewBox="0 0 123 1" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="123" height="1" fill="#6E6E6E"/>
+      <section 
+        className="py-16 mx-auto"
+        style={{
+          maxWidth: '1440px',
+          borderRadius: '60px',
+          background: 'linear-gradient(180deg, #FFFFFF 0%, #FFE7DE 100%)',
+        }}
+      >
+        <div className="px-6">
+          <div className="flex flex-col items-center mb-12">
+            <div 
+              className="flex items-center justify-center gap-2 mb-8"
+              style={{
+                borderRadius: '100px',
+                background: '#FFFFFF',
+                border: '1px solid #D2D2D2',
+                boxShadow: '0px 10px 10px 0px #6767DA14',
+                padding: '12px 24px',
+              }}
+            >
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fillRule="evenodd" clipRule="evenodd" d="M9.18759 4.14886C8.15964 6.48064 6.29326 8.34699 3.96148 9.37502C6.29326 10.403 8.15964 12.2693 9.18766 14.6012C10.2156 12.2693 12.082 10.403 14.4137 9.37502C12.082 8.34699 10.2156 6.48064 9.18759 4.14886ZM8.64294 2.297H9.73231C10.5589 5.50142 13.0612 8.00372 16.2656 8.83037V9.91967C13.0612 10.7462 10.5589 13.2486 9.73231 16.453H8.64294C7.81636 13.2486 5.31405 10.7462 2.10962 9.91967V8.83037C5.31405 8.00372 7.81636 5.50142 8.64294 2.297Z" fill="#6E6E6E"/>
+                <path fillRule="evenodd" clipRule="evenodd" d="M12.377 4.87377V3.74877C12.6231 3.74877 12.9563 3.59736 13.2487 3.30161C13.542 3.00499 13.6882 2.67056 13.6882 2.4375H14.8132C14.8132 2.66905 14.9601 3.00332 15.2554 3.30101C15.55 3.59806 15.8833 3.74877 16.1245 3.74877V4.87377C15.8616 4.87377 15.5291 5.02637 15.2442 5.31592C14.9582 5.60677 14.8132 5.94137 14.8132 6.18503H13.6882C13.6882 5.94853 13.538 5.61508 13.2394 5.31834C12.9403 5.02113 12.6062 4.87377 12.377 4.87377ZM14.2426 4.75183C14.306 4.67263 14.3729 4.59749 14.4422 4.52705C14.5185 4.44946 14.6007 4.3745 14.6882 4.30377C14.6061 4.23656 14.5287 4.1659 14.4566 4.09322C14.3859 4.02196 14.3173 3.94565 14.252 3.86501C14.1872 3.94538 14.119 4.02149 14.0486 4.09262C13.9726 4.16952 13.8906 4.24411 13.8035 4.31472C13.8844 4.38039 13.961 4.44939 14.0324 4.52037C14.1049 4.59241 14.1755 4.66981 14.2426 4.75183Z" fill="#6E6E6E"/>
               </svg>
-              
-              <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20.5001 37.5834C29.9349 37.5834 37.5834 29.9349 37.5834 20.5001C37.5834 11.0652 29.9349 3.41675 20.5001 3.41675C11.0652 3.41675 3.41675 11.0652 3.41675 20.5001C3.41675 29.9349 11.0652 37.5834 20.5001 37.5834Z" stroke="url(#paint0_linear_232_309)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M16.2292 16.2291C16.2292 13.8704 18.1414 11.9583 20.5001 11.9583C22.8588 11.9583 24.7709 13.8704 24.7709 16.2291C24.7709 17.693 24.0345 18.9848 22.9117 19.7544C21.7443 20.5544 20.5001 21.6472 20.5001 23.0624" stroke="url(#paint1_linear_232_309)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M20.5002 29.0417H20.5154" stroke="url(#paint2_linear_232_309)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-                <defs>
-                  <linearGradient id="paint0_linear_232_309" x1="3.41675" y1="20.5001" x2="37.5834" y2="20.5001" gradientUnits="userSpaceOnUse">
-                    <stop stopColor="#F25E25"/>
-                    <stop offset="1" stopColor="#F97F11"/>
-                  </linearGradient>
-                  <linearGradient id="paint1_linear_232_309" x1="16.2292" y1="17.5103" x2="24.7709" y2="17.5103" gradientUnits="userSpaceOnUse">
-                    <stop stopColor="#F25E25"/>
-                    <stop offset="1" stopColor="#F97F11"/>
-                  </linearGradient>
-                  <linearGradient id="paint2_linear_232_309" x1="20.5002" y1="29.5417" x2="20.5154" y2="29.5417" gradientUnits="userSpaceOnUse">
-                    <stop stopColor="#F25E25"/>
-                    <stop offset="1" stopColor="#F97F11"/>
-                  </linearGradient>
-                </defs>
-              </svg>
-
-              <h3
+              <span 
                 style={{
                   fontFamily: 'Spline Sans, sans-serif',
-                  fontWeight: 600,
-                  fontSize: '32px',
-                  lineHeight: '55px',
-                  letterSpacing: '0%',
-                  color: '#141414',
+                  fontWeight: 400,
+                  fontSize: '16px',
+                  lineHeight: '100%',
+                  textAlign: 'center',
+                  textTransform: 'capitalize',
+                  background: 'linear-gradient(90deg, #F25E25 0%, #F97F11 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
                 }}
               >
-                Lost in the noise and confused where to Start?
-              </h3>
+                Why Choose Ayonaire
+              </span>
             </div>
 
-            <div className="flex items-center gap-6">
-              <button
-                className="flex items-center gap-2 px-8 py-4 rounded-full transition-all hover:scale-105"
+            <h2 
+              className="mb-6"
+              style={{
+                fontFamily: 'Spline Sans, sans-serif',
+                fontWeight: 700,
+                fontSize: '48px',
+                lineHeight: '126%',
+                letterSpacing: '0%',
+                textAlign: 'center',
+                color: '#141414',
+              }}
+            >
+              Why Learners Choose Ayonaire
+            </h2>
+
+            <p 
+              style={{
+                width: '714.42px',
+                maxWidth: '100%',
+                fontFamily: 'Satoshi, sans-serif',
+                fontWeight: 400,
+                fontSize: '20px',
+                lineHeight: '100%',
+                letterSpacing: '0.02em',
+                textAlign: 'center',
+                color: '#14141480',
+              }}
+            >
+              Most tech schools only teach skills. At Ayonaire, we don&apos;t just train — we transform. Here&apos;s why thousands trust us to shape their future
+            </p>
+          </div>
+
+          <div 
+            style={{
+              maxWidth: '1280px',
+              margin: '0 auto',
+            }}
+          >
+            <div 
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(4, 310px)',
+                gap: '24px',
+                justifyContent: 'center',
+              }}
+            >
+            {[
+              {
+                icon: '/icons/why1.svg',
+                title: 'Gain Job-Ready Experience',
+                description: 'Every student gets placed into real projects and internships. You don\'t just graduate with certificates — you graduate with work experience that employers trust.',
+              },
+              {
+                icon: '/icons/why2.svg',
+                title: 'Get Expert Guidance to Get Hired',
+                description: 'Every student gets placed into real projects and internships. You don\'t just graduate with certificates — you graduate with work experience that employers trust.',
+              },
+              {
+                icon: '/icons/why3.svg',
+                title: 'Earn Certifications Employers Trust',
+                description: 'Every student gets placed into real projects and internships. You don\'t just graduate with certificates — you graduate with work experience that employers trust.',
+              },
+              {
+                icon: '/icons/why4.svg',
+                title: 'Build a Job-Winning Portfolio',
+                description: 'Every student gets placed into real projects and internships. You don\'t just graduate with certificates — you graduate with work experience that employers trust.',
+              },
+              {
+                icon: '/icons/why5.svg',
+                title: 'Launch Your Global Career',
+                description: 'Whether it\'s remote jobs, international roles, or visa guidance, we connect you beyond borders. Our mission is simple: prepare Africans for global opportunities while solving real world challenges.',
+              },
+              {
+                icon: '/icons/why6.svg',
+                title: 'Master the Skills for Career Growth',
+                description: 'Every student gets placed into real projects and internships. You don\'t just graduate with certificates — you graduate with work experience that employers trust.',
+              },
+            ].map((item, index) => (
+              <div
+                key={index}
                 style={{
-                  background: 'linear-gradient(90deg, #F25E25 0%, #F97F11 100%)',
-                  fontFamily: 'Satoshi, sans-serif',
-                  fontWeight: 700,
-                  fontSize: '18px',
-                  color: '#FFFFFF',
+                  width: '310px',
+                  borderRadius: '16px',
+                  padding: '10px',
+                  background: 'linear-gradient(182.86deg, rgba(242, 94, 37, 0.24) 2.21%, rgba(249, 127, 17, 0) 56.93%)',
                 }}
               >
-                Take Our Survey
-                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M10.5 4.5L15 9M15 9L10.5 13.5M15 9H3" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </button>
+                <div
+                  style={{
+                    borderRadius: '16px',
+                    background: 'linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.54) 99.49%, rgba(255, 255, 255, 0) 100%)',
+                    paddingTop: '40px',
+                    paddingLeft: '24px',
+                    paddingRight: '24px',
+                    paddingBottom: '40px',
+                  }}
+                >
+                  <div style={{ marginBottom: '24px' }}>
+                    <Image
+                      src={item.icon}
+                      alt={item.title}
+                      width={40}
+                      height={40}
+                    />
+                  </div>
+                  
+                  <h3 
+                    style={{
+                      fontFamily: 'Spline Sans, sans-serif',
+                      fontWeight: 500,
+                      fontSize: '24px',
+                      lineHeight: '132%',
+                      letterSpacing: '0%',
+                      color: '#141414',
+                      marginBottom: '12px',
+                      marginTop: 0,
+                    }}
+                  >
+                    {item.title}
+                  </h3>
+                  
+                  <p 
+                    style={{
+                      fontFamily: 'Satoshi, sans-serif',
+                      fontWeight: 400,
+                      fontSize: '12px',
+                      lineHeight: '150%',
+                      letterSpacing: '0.02em',
+                      color: '#6E6E6E',
+                      margin: 0,
+                    }}
+                  >
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
+      {showPopup && (
+        <>
+          <div 
+            className="fixed inset-0 bg-black z-40"
+            style={{
+              opacity: popupAnimated ? 0.5 : 0,
+              transition: 'opacity 0.4s ease-out',
+            }}
+            onClick={handleClosePopup}
+          />
+          
+          <div 
+            className="fixed inset-0 z-50 flex items-center justify-center p-6"
+            style={{
+              pointerEvents: popupAnimated ? 'auto' : 'none',
+            }}
+          >
+            <div 
+              className="relative bg-white rounded-lg"
+              style={{
+                maxWidth: '1440px',
+                width: '100%',
+                borderTop: '2px solid transparent',
+                borderImage: 'linear-gradient(90deg, #F25E25 0%, #F97F11 100%) 1',
+                transform: popupAnimated ? 'scale(1)' : 'scale(0.95)',
+                opacity: popupAnimated ? 1 : 0,
+                transition: 'transform 0.4s ease-out, opacity 0.4s ease-out',
+              }}
+            >
               <button
                 onClick={handleClosePopup}
-                className="transition-all hover:scale-110"
+                className="absolute top-4 right-4 transition-all hover:scale-110 z-10"
               >
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12Z" stroke="url(#paint0_linear_226_746)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -599,9 +745,86 @@ export default function Home() {
                   </defs>
                 </svg>
               </button>
+
+              <div className="flex items-center justify-between px-12 py-6">
+                <div className="flex items-center gap-4">
+                  <svg width="123" height="1" viewBox="0 0 123 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="123" height="1" fill="#6E6E6E"/>
+                  </svg>
+                  
+                  <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.5001 37.5834C29.9349 37.5834 37.5834 29.9349 37.5834 20.5001C37.5834 11.0652 29.9349 3.41675 20.5001 3.41675C11.0652 3.41675 3.41675 11.0652 3.41675 20.5001C3.41675 29.9349 11.0652 37.5834 20.5001 37.5834Z" stroke="url(#paint0_linear_232_309)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M16.2292 16.2291C16.2292 13.8704 18.1414 11.9583 20.5001 11.9583C22.8588 11.9583 24.7709 13.8704 24.7709 16.2291C24.7709 17.693 24.0345 18.9848 22.9117 19.7544C21.7443 20.5544 20.5001 21.6472 20.5001 23.0624" stroke="url(#paint1_linear_232_309)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M20.5002 29.0417H20.5154" stroke="url(#paint2_linear_232_309)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    <defs>
+                      <linearGradient id="paint0_linear_232_309" x1="3.41675" y1="20.5001" x2="37.5834" y2="20.5001" gradientUnits="userSpaceOnUse">
+                        <stop stopColor="#F25E25"/>
+                        <stop offset="1" stopColor="#F97F11"/>
+                      </linearGradient>
+                      <linearGradient id="paint1_linear_232_309" x1="16.2292" y1="17.5103" x2="24.7709" y2="17.5103" gradientUnits="userSpaceOnUse">
+                        <stop stopColor="#F25E25"/>
+                        <stop offset="1" stopColor="#F97F11"/>
+                      </linearGradient>
+                      <linearGradient id="paint2_linear_232_309" x1="20.5002" y1="29.5417" x2="20.5154" y2="29.5417" gradientUnits="userSpaceOnUse">
+                        <stop stopColor="#F25E25"/>
+                        <stop offset="1" stopColor="#F97F11"/>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+
+                  <h3
+                    style={{
+                      fontFamily: 'Spline Sans, sans-serif',
+                      fontWeight: 600,
+                      fontSize: '32px',
+                      lineHeight: '55px',
+                      letterSpacing: '0%',
+                      color: '#141414',
+                    }}
+                  >
+                    Lost in the noise and confused where to Start?
+                  </h3>
+                </div>
+
+                <button
+                  className="flex items-center justify-between rounded-[14px] transition-all hover:scale-105"
+                  style={{
+                    background: 'linear-gradient(90deg, #F67219 0%, #FFDCC4 100%)',
+                    paddingRight: '12px',
+                    paddingLeft: '16px',
+                    paddingTop: '12px',
+                    paddingBottom: '12px',
+                  }}
+                >
+                  <span 
+                    style={{
+                      fontFamily: 'Satoshi, sans-serif',
+                      fontWeight: 700,
+                      fontSize: '16px',
+                      lineHeight: '100%',
+                      color: '#FFFFFF',
+                      paddingRight: '12px',
+                    }}
+                  >
+                    Take Our Survey
+                  </span>
+                  <div 
+                    className="flex items-center justify-center bg-white rounded-lg flex-shrink-0"
+                    style={{
+                      width: '33.33px',
+                      height: '33.33px',
+                    }}
+                  >
+                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.39038 0.571899L15.275 7.74298L8.10394 14.6276" stroke="#F67721" strokeWidth="1.5"/>
+                      <path d="M0.0153809 7.51331L14.9237 7.81712" stroke="#F67721" strokeWidth="1.5"/>
+                    </svg>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
-        </div>
+        </>
       )}
     </main>
   );
