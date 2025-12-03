@@ -1544,6 +1544,735 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="py-16">
+        <div 
+          className="mx-auto flex items-center gap-16"
+          style={{
+            maxWidth: '1277px',
+            paddingLeft: '24px',
+            paddingRight: '24px',
+          }}
+        >
+          <div style={{ flex: 1 }}>
+            <div 
+              className="flex items-center gap-3 mb-8"
+              style={{
+                borderRadius: '100px',
+                background: '#FFFFFF',
+                border: '1px solid #D2D2D2',
+                boxShadow: '0px 10px 10px 0px #6767DA14',
+                padding: '12px 24px',
+                width: 'fit-content',
+              }}
+            >
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fillRule="evenodd" clipRule="evenodd" d="M9.18759 4.14886C8.15964 6.48064 6.29326 8.34699 3.96148 9.37502C6.29326 10.403 8.15964 12.2693 9.18766 14.6012C10.2156 12.2693 12.082 10.403 14.4137 9.37502C12.082 8.34699 10.2156 6.48064 9.18759 4.14886ZM8.64294 2.297H9.73231C10.5589 5.50142 13.0612 8.00372 16.2656 8.83037V9.91967C13.0612 10.7462 10.5589 13.2486 9.73231 16.453H8.64294C7.81636 13.2486 5.31405 10.7462 2.10962 9.91967V8.83037C5.31405 8.00372 7.81636 5.50142 8.64294 2.297Z" fill="#6E6E6E"/>
+                <path fillRule="evenodd" clipRule="evenodd" d="M12.377 4.87377V3.74877C12.6231 3.74877 12.9563 3.59736 13.2487 3.30161C13.542 3.00499 13.6882 2.67056 13.6882 2.4375H14.8132C14.8132 2.66905 14.9601 3.00332 15.2554 3.30101C15.55 3.59806 15.8833 3.74877 16.1245 3.74877V4.87377C15.8616 4.87377 15.5291 5.02637 15.2442 5.31592C14.9582 5.60677 14.8132 5.94137 14.8132 6.18503H13.6882C13.6882 5.94853 13.538 5.61508 13.2394 5.31834C12.9403 5.02113 12.6062 4.87377 12.377 4.87377ZM14.2426 4.75183C14.306 4.67263 14.3729 4.59749 14.4422 4.52705C14.5185 4.44946 14.6007 4.3745 14.6882 4.30377C14.6061 4.23656 14.5287 4.1659 14.4566 4.09322C14.3859 4.02196 14.3173 3.94565 14.252 3.86501C14.1872 3.94538 14.119 4.02149 14.0486 4.09262C13.9726 4.16952 13.8906 4.24411 13.8035 4.31472C13.8844 4.38039 13.961 4.44939 14.0324 4.52037C14.1049 4.59241 14.1755 4.66981 14.2426 4.75183Z" fill="#6E6E6E"/>
+              </svg>
+              <span 
+                style={{
+                  fontFamily: 'Spline Sans, sans-serif',
+                  fontWeight: 400,
+                  fontSize: '16px',
+                  lineHeight: '100%',
+                  textAlign: 'center',
+                  textTransform: 'capitalize',
+                  background: 'linear-gradient(90deg, #F25E25 0%, #F97F11 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                }}
+              >
+                Our Mission
+              </span>
+            </div>
+
+            <h2 
+              className="mb-6"
+              style={{
+                width: '576px',
+                maxWidth: '100%',
+                fontFamily: 'Spline Sans, sans-serif',
+                fontWeight: 700,
+                fontSize: '44px',
+                lineHeight: '53px',
+                letterSpacing: '0%',
+                color: '#141414',
+              }}
+            >
+              Our Mission Is to Change Lives Through Digital Skills
+            </h2>
+
+            <div className="mb-8" style={{ width: '576px', maxWidth: '100%' }}>
+              <p 
+                style={{
+                  fontFamily: 'Satoshi, sans-serif',
+                  fontWeight: 400,
+                  fontSize: '18px',
+                  lineHeight: '24px',
+                  letterSpacing: '0%',
+                  color: 'rgba(20, 20, 20, 0.5)',
+                  marginBottom: '16px',
+                }}
+              >
+                We don&apos;t just train students; we produce problem-solvers, industry leaders, and community builders. Impact isn&apos;t a byproduct; it&apos;s the goal.
+              </p>
+
+              <p 
+                style={{
+                  fontFamily: 'Satoshi, sans-serif',
+                  fontWeight: 700,
+                  fontSize: '18px',
+                  lineHeight: '24px',
+                  letterSpacing: '0%',
+                  color: '#141414',
+                  marginBottom: '16px',
+                }}
+              >
+                We were founded to drive lasting change.
+              </p>
+
+              <p 
+                style={{
+                  fontFamily: 'Satoshi, sans-serif',
+                  fontWeight: 400,
+                  fontSize: '18px',
+                  lineHeight: '24px',
+                  letterSpacing: '0%',
+                  color: 'rgba(20, 20, 20, 0.5)',
+                }}
+              >
+                Transforming one life can have a lasting influence on generations, so every program, project, and mentorship is carefully designed to create a meaningful impact.
+              </p>
+            </div>
+
+            <button
+              className="group flex items-center justify-between rounded-[14px] transition-all hover:scale-105"
+              style={{
+                background: 'linear-gradient(90deg, #F67219 0%, #FFDCC4 100%)',
+                paddingRight: '12px',
+                paddingLeft: '16px',
+                paddingTop: '12px',
+                paddingBottom: '12px',
+                border: 'none',
+                cursor: 'pointer',
+              }}
+            >
+              <span 
+                style={{
+                  fontFamily: 'Satoshi, sans-serif',
+                  fontWeight: 700,
+                  fontSize: '16px',
+                  lineHeight: '100%',
+                  color: '#FFFFFF',
+                  paddingRight: '12px',
+                }}
+              >
+                Learn More About Us
+              </span>
+              <div 
+                className="flex items-center justify-center bg-white rounded-lg flex-shrink-0"
+                style={{
+                  width: '33.33px',
+                  height: '33.33px',
+                }}
+              >
+                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.39038 0.571899L15.275 7.74298L8.10394 14.6276" stroke="#F67721" strokeWidth="1.5"/>
+                  <path d="M0.0153809 7.51331L14.9237 7.81712" stroke="#F67721" strokeWidth="1.5"/>
+                </svg>
+              </div>
+            </button>
+          </div>
+
+          <div className="relative flex justify-end items-center" style={{ flexShrink: 0 }}>
+            <div 
+              className="relative overflow-hidden shadow-2xl"
+              style={{ 
+                width: '450.9px',
+                borderRadius: '1.5rem',
+                borderBottomLeftRadius: '100000px',
+                borderBottomRightRadius: '100000px',
+              }}
+            >
+              <Image
+                src="/images/woman1.png"
+                alt="Our Mission"
+                width={451}
+                height={600}
+                className="w-full h-auto"
+                style={{ color: 'transparent' }}
+              />
+              
+              <button
+                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-pulse hover:scale-110 transition-transform cursor-pointer"
+                onClick={() => setIsPlaying(!isPlaying)}
+                style={{
+                  background: 'transparent',
+                  border: 'none',
+                }}
+              >
+                <svg width="93" height="93" viewBox="0 0 93 93" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="5" y="5" width="83" height="82.5328" rx="41.2664" fill="#F67219"/>
+                  <rect x="2.5" y="2.5" width="88" height="87.5328" rx="43.7664" stroke="white" strokeOpacity="0.24" strokeWidth="5"/>
+                  <path d="M58.9697 44.11C60.8379 45.2867 60.8379 48.0102 58.9697 49.1869L42.8488 59.3404C40.8511 60.5986 38.25 59.1629 38.25 56.8019V36.4949C38.25 34.134 40.8511 32.6982 42.8488 33.9565L58.9697 44.11Z" fill="white"/>
+                </svg>
+              </button>
+            </div>
+
+            <div 
+              className="absolute shadow-lg"
+              style={{
+                right: '-70px',
+                top: '30%',
+              }}
+            >
+              <Image
+                src="/images/people1.png"
+                alt="Students"
+                width={60}
+                height={180}
+                style={{ color: 'transparent' }}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section 
+        className="py-16"
+        style={{
+          maxWidth: '100%',
+          margin: '0 auto',
+          background: 'linear-gradient(0deg, #F3F3F3, #F3F3F3), linear-gradient(0deg, #FBFBFB, #FBFBFB)',
+        }}
+      >
+        <div className="px-6">
+          <div className="flex flex-col items-center mb-16">
+            <div 
+              className="flex items-center justify-center gap-3 mb-8"
+              style={{
+                borderRadius: '100px',
+                background: '#FFFFFF',
+                border: '1px solid #D2D2D2',
+                boxShadow: '0px 10px 10px 0px #6767DA14',
+                padding: '12px 24px',
+              }}
+            >
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fillRule="evenodd" clipRule="evenodd" d="M9.18759 4.14886C8.15964 6.48064 6.29326 8.34699 3.96148 9.37502C6.29326 10.403 8.15964 12.2693 9.18766 14.6012C10.2156 12.2693 12.082 10.403 14.4137 9.37502C12.082 8.34699 10.2156 6.48064 9.18759 4.14886ZM8.64294 2.297H9.73231C10.5589 5.50142 13.0612 8.00372 16.2656 8.83037V9.91967C13.0612 10.7462 10.5589 13.2486 9.73231 16.453H8.64294C7.81636 13.2486 5.31405 10.7462 2.10962 9.91967V8.83037C5.31405 8.00372 7.81636 5.50142 8.64294 2.297Z" fill="#6E6E6E"/>
+                <path fillRule="evenodd" clipRule="evenodd" d="M12.377 4.87377V3.74877C12.6231 3.74877 12.9563 3.59736 13.2487 3.30161C13.542 3.00499 13.6882 2.67056 13.6882 2.4375H14.8132C14.8132 2.66905 14.9601 3.00332 15.2554 3.30101C15.55 3.59806 15.8833 3.74877 16.1245 3.74877V4.87377C15.8616 4.87377 15.5291 5.02637 15.2442 5.31592C14.9582 5.60677 14.8132 5.94137 14.8132 6.18503H13.6882C13.6882 5.94853 13.538 5.61508 13.2394 5.31834C12.9403 5.02113 12.6062 4.87377 12.377 4.87377ZM14.2426 4.75183C14.306 4.67263 14.3729 4.59749 14.4422 4.52705C14.5185 4.44946 14.6007 4.3745 14.6882 4.30377C14.6061 4.23656 14.5287 4.1659 14.4566 4.09322C14.3859 4.02196 14.3173 3.94565 14.252 3.86501C14.1872 3.94538 14.119 4.02149 14.0486 4.09262C13.9726 4.16952 13.8906 4.24411 13.8035 4.31472C13.8844 4.38039 13.961 4.44939 14.0324 4.52037C14.1049 4.59241 14.1755 4.66981 14.2426 4.75183Z" fill="#6E6E6E"/>
+              </svg>
+              <span 
+                style={{
+                  fontFamily: 'Spline Sans, sans-serif',
+                  fontWeight: 400,
+                  fontSize: '16px',
+                  lineHeight: '100%',
+                  textAlign: 'center',
+                  textTransform: 'capitalize',
+                  background: 'linear-gradient(90deg, #F25E25 0%, #F97F11 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                }}
+              >
+                Our Process
+              </span>
+            </div>
+
+            <h2 
+              className="mb-6"
+              style={{
+                fontFamily: 'Spline Sans, sans-serif',
+                fontWeight: 700,
+                fontSize: '48px',
+                lineHeight: '100%',
+                letterSpacing: '0%',
+                color: '#141414',
+                textAlign: 'center',
+              }}
+            >
+              How We Learn at Ayonaire
+            </h2>
+
+            <p 
+              style={{
+                fontFamily: 'Satoshi, sans-serif',
+                fontWeight: 400,
+                fontSize: '18px',
+                lineHeight: '100%',
+                letterSpacing: '0%',
+                textAlign: 'center',
+                color: '#141414',
+                maxWidth: '800px',
+              }}
+            >
+              We walk with you from beginner to job-ready with a proven, structured learning experience. Every step of the journey is built for results
+            </p>
+          </div>
+
+          <div 
+            className="flex justify-center items-center"
+            style={{ gap: '25.91px' }}
+          >
+            {/* Box 1: Live Instructor-Led Classes */}
+            <div className="flex flex-col items-center" style={{ position: 'relative' }}>
+              <div
+                style={{
+                  width: '64.77px',
+                  height: '64.77px',
+                  borderRadius: '36.43px',
+                  padding: '12.14px',
+                  background: 'linear-gradient(132.4deg, #F67219 57.76%, #FFE6D5 98.88%)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  marginBottom: '-30px',
+                  position: 'relative',
+                  zIndex: 10,
+                }}
+              >
+                <Image
+                  src="/icons/process1.svg"
+                  alt="Live Instructor-Led Classes"
+                  width={40}
+                  height={40}
+                />
+              </div>
+
+              <div style={{ position: 'relative' }}>
+                <div
+                  style={{
+                    width: '249.36px',
+                    height: '249.36px',
+                    borderRadius: '24.29px',
+                    background: '#FFFFFF',
+                    boxShadow: '0px 8.91px 48.58px 0px #00000014',
+                    padding: '16px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <h3
+                    style={{
+                      fontFamily: 'Spline Sans, sans-serif',
+                      fontWeight: 700,
+                      fontSize: '24px',
+                      lineHeight: '100%',
+                      textAlign: 'center',
+                      color: '#141414',
+                      marginBottom: '16px',
+                    }}
+                  >
+                    Live Instructor-Led Classes
+                  </h3>
+                  <p
+                    style={{
+                      fontFamily: 'Satoshi, sans-serif',
+                      fontWeight: 400,
+                      fontSize: '16px',
+                      lineHeight: '24px',
+                      textAlign: 'center',
+                      color: '#6E6E6E',
+                    }}
+                  >
+                    Join expert-led virtual classes where you&apos;ll learn through real-world use cases, performance tasks, and hands-on activities.
+                  </p>
+                </div>
+
+                <div 
+                  style={{ 
+                    position: 'absolute', 
+                    bottom: 0, 
+                    left: '50%', 
+                    transform: 'translateX(-50%) translateY(0%)',
+                  }}
+                >
+                  <svg width="284" height="139" viewBox="0 0 284 139" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.90824 0V98.8947C8.67107 110.513 25.534 129.243 34.0925 129.538H241.163C255.369 129.242 261.848 125.003 271.717 112.567C273.794 109.948 274.864 106.68 274.864 103.337V0" stroke="url(#paint0_linear_232_163_box1)" strokeWidth="17.8115"/>
+                    <defs>
+                      <linearGradient id="paint0_linear_232_163_box1" x1="8.90576" y1="64.7691" x2="274.864" y2="64.7691" gradientUnits="userSpaceOnUse">
+                        <stop stopColor="#F25E25"/>
+                        <stop offset="1" stopColor="#F97F11"/>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+
+              <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <svg width="13" height="70" viewBox="0 0 13 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.04181 1.16309C5.04181 0.520493 5.56273 -0.000430794 6.20532 -0.000430822C6.84791 -0.00043085 7.36884 0.520493 7.36884 1.16309L6.20532 1.16309L5.04181 1.16309ZM6.20532 57.0119C9.63248 57.0119 12.4107 59.7901 12.4107 63.2173C12.4107 66.6445 9.63249 69.4227 6.20533 69.4227C2.77816 69.4227 -9.77504e-05 66.6445 -9.79002e-05 63.2173C-9.805e-05 59.7901 2.77816 57.0119 6.20532 57.0119ZM6.20532 1.16309L7.36884 1.16309L7.36884 63.2173L6.20532 63.2173L5.04181 63.2173L5.04181 1.16309L6.20532 1.16309Z" fill="url(#paint0_linear_232_160)"/>
+                  <defs>
+                    <linearGradient id="paint0_linear_232_160" x1="6.70532" y1="1.16309" x2="6.70532" y2="63.2173" gradientUnits="userSpaceOnUse">
+                      <stop stopColor="#F25E25"/>
+                      <stop offset="1" stopColor="#F97F11"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+
+            {/* Arrow 1 */}
+            <div style={{ marginLeft: '-22px' }}>
+              <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clipPath="url(#clip0_232_167)">
+                  <path d="M24.5473 4.39419C24.4202 4.51794 24.3193 4.66601 24.2507 4.82958C24.182 4.99314 24.147 5.16886 24.1477 5.34624L24.1477 12.3301C24.1477 12.8749 23.706 13.3166 23.1612 13.3166H1.32178C0.591763 13.3166 0 13.9084 0 14.6384L0 28.2314C0 28.9614 0.591763 29.5531 1.32178 29.5531H23.1612C23.706 29.5531 24.1477 29.9948 24.1477 30.5396V37.5432C24.1339 38.2731 24.7144 38.876 25.4442 38.8897C25.625 38.8932 25.8045 38.8595 25.9718 38.7907C26.139 38.722 26.2903 38.6197 26.4164 38.4901L42.5149 22.3917C42.7637 22.1468 42.9055 21.8135 42.9095 21.4644C42.9102 21.2882 42.8756 21.1137 42.8078 20.9511C42.7401 20.7885 42.6405 20.641 42.5149 20.5174L26.4164 4.41898C25.9072 3.89602 25.0703 3.88492 24.5473 4.39419Z" fill="url(#paint0_linear_232_167_1)"/>
+                </g>
+                <defs>
+                  <linearGradient id="paint0_linear_232_167_1" x1="21.4548" y1="38.89" x2="21.4548" y2="4.01938" gradientUnits="userSpaceOnUse">
+                    <stop stopColor="#F25E25"/>
+                    <stop offset="1" stopColor="#F97F11"/>
+                  </linearGradient>
+                  <clipPath id="clip0_232_167">
+                    <rect width="42.9095" height="42.9095" fill="white" transform="matrix(0 -1 1 0 0 42.9095)"/>
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+
+            {/* Box 2: Real-World Projects & Internship */}
+            <div className="flex flex-col items-center" style={{ position: 'relative' }}>
+              <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <svg width="13" height="70" viewBox="0 0 13 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.36884 68.2598C7.36884 68.9024 6.84791 69.4233 6.20532 69.4233C5.56273 69.4233 5.04181 68.9024 5.04181 68.2598L6.20532 68.2598L7.36884 68.2598ZM6.20532 12.411C2.77816 12.411 -0.000103175 9.6327 -0.000103325 6.20554C-0.000103475 2.77838 2.77816 0.00012222 6.20532 0.00012207C9.63248 0.000121921 12.4107 2.77838 12.4107 6.20554C12.4107 9.6327 9.63248 12.411 6.20532 12.411ZM6.20532 68.2598L5.04181 68.2598L5.0418 6.20554L6.20532 6.20554L7.36884 6.20554L7.36884 68.2598L6.20532 68.2598Z" fill="url(#paint0_linear_232_186)"/>
+                  <defs>
+                    <linearGradient id="paint0_linear_232_186" x1="5.70532" y1="68.2598" x2="5.70532" y2="6.20554" gradientUnits="userSpaceOnUse">
+                      <stop stopColor="#F25E25"/>
+                      <stop offset="1" stopColor="#F97F11"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+
+              <div style={{ position: 'relative' }}>
+                <div 
+                  style={{ 
+                    position: 'absolute', 
+                    top: 0, 
+                    left: '50%', 
+                    transform: 'translateX(-50%) translateY(0%)',
+                  }}
+                >
+                  <svg width="284" height="139" viewBox="0 0 284 139" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M274.861 138.444V39.5496C275.098 27.9315 258.236 9.2011 249.677 8.90617L42.6064 8.90617C28.4009 9.20222 21.9219 13.4417 12.053 25.8774C9.97504 28.4959 8.90573 31.7643 8.90573 35.1071V138.444" stroke="url(#paint0_linear_232_190_box2)" strokeWidth="17.8115"/>
+                    <defs>
+                      <linearGradient id="paint0_linear_232_190_box2" x1="274.864" y1="73.6753" x2="8.90573" y2="73.6753" gradientUnits="userSpaceOnUse">
+                        <stop stopColor="#F25E25"/>
+                        <stop offset="1" stopColor="#F97F11"/>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+
+                <div
+                  style={{
+                    width: '249.36px',
+                    height: '249.36px',
+                    borderRadius: '24.29px',
+                    background: '#FFFFFF',
+                    boxShadow: '0px 8.91px 48.58px 0px #00000014',
+                    padding: '16px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <h3
+                    style={{
+                      fontFamily: 'Spline Sans, sans-serif',
+                      fontWeight: 700,
+                      fontSize: '24px',
+                      lineHeight: '100%',
+                      textAlign: 'center',
+                      color: '#141414',
+                      marginBottom: '16px',
+                    }}
+                  >
+                    Real-World Projects & Internship
+                  </h3>
+                  <p
+                    style={{
+                      fontFamily: 'Satoshi, sans-serif',
+                      fontWeight: 400,
+                      fontSize: '16px',
+                      lineHeight: '24px',
+                      textAlign: 'center',
+                      color: '#6E6E6E',
+                    }}
+                  >
+                    Work on 5 capstone projects that reflect real industry problems which build your resume and portfolio.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                style={{
+                  width: '64.77px',
+                  height: '64.77px',
+                  borderRadius: '36.43px',
+                  padding: '12.14px',
+                  background: 'linear-gradient(132.4deg, #F67219 57.76%, #FFE6D5 98.88%)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  marginTop: '-30px',
+                  position: 'relative',
+                  zIndex: 10,
+                }}
+              >
+                <Image
+                  src="/icons/process2.svg"
+                  alt="Real-World Projects"
+                  width={40}
+                  height={40}
+                />
+              </div>
+            </div>
+
+            {/* Arrow 2 */}
+            <div style={{ marginLeft: '-22px' }}>
+              <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clipPath="url(#clip0_232_167_2)">
+                  <path d="M24.5473 4.39419C24.4202 4.51794 24.3193 4.66601 24.2507 4.82958C24.182 4.99314 24.147 5.16886 24.1477 5.34624L24.1477 12.3301C24.1477 12.8749 23.706 13.3166 23.1612 13.3166H1.32178C0.591763 13.3166 0 13.9084 0 14.6384L0 28.2314C0 28.9614 0.591763 29.5531 1.32178 29.5531H23.1612C23.706 29.5531 24.1477 29.9948 24.1477 30.5396V37.5432C24.1339 38.2731 24.7144 38.876 25.4442 38.8897C25.625 38.8932 25.8045 38.8595 25.9718 38.7907C26.139 38.722 26.2903 38.6197 26.4164 38.4901L42.5149 22.3917C42.7637 22.1468 42.9055 21.8135 42.9095 21.4644C42.9102 21.2882 42.8756 21.1137 42.8078 20.9511C42.7401 20.7885 42.6405 20.641 42.5149 20.5174L26.4164 4.41898C25.9072 3.89602 25.0703 3.88492 24.5473 4.39419Z" fill="url(#paint0_linear_232_167_2)"/>
+                </g>
+                <defs>
+                  <linearGradient id="paint0_linear_232_167_2" x1="21.4548" y1="38.89" x2="21.4548" y2="4.01938" gradientUnits="userSpaceOnUse">
+                    <stop stopColor="#F25E25"/>
+                    <stop offset="1" stopColor="#F97F11"/>
+                  </linearGradient>
+                  <clipPath id="clip0_232_167_2">
+                    <rect width="42.9095" height="42.9095" fill="white" transform="matrix(0 -1 1 0 0 42.9095)"/>
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+
+            {/* Box 3: Mentorship & Feedback */}
+            <div className="flex flex-col items-center" style={{ position: 'relative' }}>
+              <div
+                style={{
+                  width: '64.77px',
+                  height: '64.77px',
+                  borderRadius: '36.43px',
+                  padding: '12.14px',
+                  background: 'linear-gradient(132.4deg, #F67219 57.76%, #FFE6D5 98.88%)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  marginBottom: '-30px',
+                  position: 'relative',
+                  zIndex: 10,
+                }}
+              >
+                <Image
+                  src="/icons/process3.svg"
+                  alt="Mentorship & Feedback"
+                  width={40}
+                  height={40}
+                />
+              </div>
+
+              <div style={{ position: 'relative' }}>
+                <div
+                  style={{
+                    width: '249.36px',
+                    height: '249.36px',
+                    borderRadius: '24.29px',
+                    background: '#FFFFFF',
+                    boxShadow: '0px 8.91px 48.58px 0px #00000014',
+                    padding: '16px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <h3
+                    style={{
+                      fontFamily: 'Spline Sans, sans-serif',
+                      fontWeight: 700,
+                      fontSize: '24px',
+                      lineHeight: '100%',
+                      textAlign: 'center',
+                      color: '#141414',
+                      marginBottom: '16px',
+                    }}
+                  >
+                    Mentorship & Feedback
+                  </h3>
+                  <p
+                    style={{
+                      fontFamily: 'Satoshi, sans-serif',
+                      fontWeight: 400,
+                      fontSize: '16px',
+                      lineHeight: '24px',
+                      textAlign: 'center',
+                      color: '#6E6E6E',
+                    }}
+                  >
+                    Get weekly check-ins, 1-on-1 sessions, and feedback on your projects. You&apos;ll never feel stuck or alone.
+                  </p>
+                </div>
+
+                <div 
+                  style={{ 
+                    position: 'absolute', 
+                    bottom: 0, 
+                    left: '50%', 
+                    transform: 'translateX(-50%) translateY(0%)',
+                  }}
+                >
+                  <svg width="284" height="139" viewBox="0 0 284 139" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.90824 0V98.8947C8.67107 110.513 25.534 129.243 34.0925 129.538H241.163C255.369 129.242 261.848 125.003 271.717 112.567C273.794 109.948 274.864 106.68 274.864 103.337V0" stroke="url(#paint0_linear_232_163_box3)" strokeWidth="17.8115"/>
+                    <defs>
+                      <linearGradient id="paint0_linear_232_163_box3" x1="8.90576" y1="64.7691" x2="274.864" y2="64.7691" gradientUnits="userSpaceOnUse">
+                        <stop stopColor="#F25E25"/>
+                        <stop offset="1" stopColor="#F97F11"/>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+
+              <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <svg width="13" height="70" viewBox="0 0 13 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.04181 1.16309C5.04181 0.520493 5.56273 -0.000430794 6.20532 -0.000430822C6.84791 -0.00043085 7.36884 0.520493 7.36884 1.16309L6.20532 1.16309L5.04181 1.16309ZM6.20532 57.0119C9.63248 57.0119 12.4107 59.7901 12.4107 63.2173C12.4107 66.6445 9.63249 69.4227 6.20533 69.4227C2.77816 69.4227 -9.77504e-05 66.6445 -9.79002e-05 63.2173C-9.805e-05 59.7901 2.77816 57.0119 6.20532 57.0119ZM6.20532 1.16309L7.36884 1.16309L7.36884 63.2173L6.20532 63.2173L5.04181 63.2173L5.04181 1.16309L6.20532 1.16309Z" fill="url(#paint0_linear_232_160_3)"/>
+                  <defs>
+                    <linearGradient id="paint0_linear_232_160_3" x1="6.70532" y1="1.16309" x2="6.70532" y2="63.2173" gradientUnits="userSpaceOnUse">
+                      <stop stopColor="#F25E25"/>
+                      <stop offset="1" stopColor="#F97F11"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+
+            {/* Arrow 3 */}
+            <div style={{ marginLeft: '-22px' }}>
+              <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clipPath="url(#clip0_232_167_3)">
+                  <path d="M24.5473 4.39419C24.4202 4.51794 24.3193 4.66601 24.2507 4.82958C24.182 4.99314 24.147 5.16886 24.1477 5.34624L24.1477 12.3301C24.1477 12.8749 23.706 13.3166 23.1612 13.3166H1.32178C0.591763 13.3166 0 13.9084 0 14.6384L0 28.2314C0 28.9614 0.591763 29.5531 1.32178 29.5531H23.1612C23.706 29.5531 24.1477 29.9948 24.1477 30.5396V37.5432C24.1339 38.2731 24.7144 38.876 25.4442 38.8897C25.625 38.8932 25.8045 38.8595 25.9718 38.7907C26.139 38.722 26.2903 38.6197 26.4164 38.4901L42.5149 22.3917C42.7637 22.1468 42.9055 21.8135 42.9095 21.4644C42.9102 21.2882 42.8756 21.1137 42.8078 20.9511C42.7401 20.7885 42.6405 20.641 42.5149 20.5174L26.4164 4.41898C25.9072 3.89602 25.0703 3.88492 24.5473 4.39419Z" fill="url(#paint0_linear_232_167_3)"/>
+                </g>
+                <defs>
+                  <linearGradient id="paint0_linear_232_167_3" x1="21.4548" y1="38.89" x2="21.4548" y2="4.01938" gradientUnits="userSpaceOnUse">
+                    <stop stopColor="#F25E25"/>
+                    <stop offset="1" stopColor="#F97F11"/>
+                  </linearGradient>
+                  <clipPath id="clip0_232_167_3">
+                    <rect width="42.9095" height="42.9095" fill="white" transform="matrix(0 -1 1 0 0 42.9095)"/>
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+
+            {/* Box 4: Leadership & Soft Skills Mastery */}
+            <div className="flex flex-col items-center" style={{ position: 'relative' }}>
+              <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <svg width="13" height="70" viewBox="0 0 13 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.36884 68.2598C7.36884 68.9024 6.84791 69.4233 6.20532 69.4233C5.56273 69.4233 5.04181 68.9024 5.04181 68.2598L6.20532 68.2598L7.36884 68.2598ZM6.20532 12.411C2.77816 12.411 -0.000103175 9.6327 -0.000103325 6.20554C-0.000103475 2.77838 2.77816 0.00012222 6.20532 0.00012207C9.63248 0.000121921 12.4107 2.77838 12.4107 6.20554C12.4107 9.6327 9.63248 12.411 6.20532 12.411ZM6.20532 68.2598L5.04181 68.2598L5.0418 6.20554L6.20532 6.20554L7.36884 6.20554L7.36884 68.2598L6.20532 68.2598Z" fill="url(#paint0_linear_232_186_4)"/>
+                  <defs>
+                    <linearGradient id="paint0_linear_232_186_4" x1="5.70532" y1="68.2598" x2="5.70532" y2="6.20554" gradientUnits="userSpaceOnUse">
+                      <stop stopColor="#F25E25"/>
+                      <stop offset="1" stopColor="#F97F11"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+
+              <div style={{ position: 'relative' }}>
+                <div 
+                  style={{ 
+                    position: 'absolute', 
+                    top: 0, 
+                    left: '50%', 
+                    transform: 'translateX(-50%) translateY(0%)',
+                  }}
+                >
+                  <svg width="284" height="139" viewBox="0 0 284 139" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M274.861 138.444V39.5496C275.098 27.9315 258.236 9.2011 249.677 8.90617L42.6064 8.90617C28.4009 9.20222 21.9219 13.4417 12.053 25.8774C9.97504 28.4959 8.90573 31.7643 8.90573 35.1071V138.444" stroke="url(#paint0_linear_232_190_box4)" strokeWidth="17.8115"/>
+                    <defs>
+                      <linearGradient id="paint0_linear_232_190_box4" x1="274.864" y1="73.6753" x2="8.90573" y2="73.6753" gradientUnits="userSpaceOnUse">
+                        <stop stopColor="#F25E25"/>
+                        <stop offset="1" stopColor="#F97F11"/>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+
+                <div
+                  style={{
+                    width: '249.36px',
+                    height: '249.36px',
+                    borderRadius: '24.29px',
+                    background: '#FFFFFF',
+                    boxShadow: '0px 8.91px 48.58px 0px #00000014',
+                    padding: '16px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <h3
+                    style={{
+                      fontFamily: 'Spline Sans, sans-serif',
+                      fontWeight: 700,
+                      fontSize: '24px',
+                      lineHeight: '100%',
+                      textAlign: 'center',
+                      color: '#141414',
+                      marginBottom: '16px',
+                    }}
+                  >
+                    Leadership & Soft Skills Mastery
+                  </h3>
+                  <p
+                    style={{
+                      fontFamily: 'Satoshi, sans-serif',
+                      fontWeight: 400,
+                      fontSize: '16px',
+                      lineHeight: '24px',
+                      textAlign: 'center',
+                      color: '#6E6E6E',
+                    }}
+                  >
+                    Get weekly check-ins, 1-on-1 sessions, and feedback on your projects. You&apos;ll never feel stuck or alone.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                style={{
+                  width: '64.77px',
+                  height: '64.77px',
+                  borderRadius: '36.43px',
+                  padding: '12.14px',
+                  background: 'linear-gradient(132.4deg, #F67219 57.76%, #FFE6D5 98.88%)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  marginTop: '-30px',
+                  position: 'relative',
+                  zIndex: 10,
+                }}
+              >
+                <Image
+                  src="/icons/process4.svg"
+                  alt="Leadership & Soft Skills"
+                  width={40}
+                  height={40}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {showPopup && (
         <>
           <div 
